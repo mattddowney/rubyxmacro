@@ -8,9 +8,9 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Matthew Downey"]
   s.email       = ["mattddowney@gmail.com"]
-  s.homepage    = "http://www.writehack.com"
-  s.summary     = ""
-  s.description = ""
+  s.homepage    = "http://www.github.com/mattddowney/rubyxmacro"
+  s.summary     = "Automate the mouse and keyboard in X"
+  s.description = "A ruby C extension to automate the mouse and keyboard in X Windows"
 
   #s.rubyforge_project = "rubyxmacro"
 
