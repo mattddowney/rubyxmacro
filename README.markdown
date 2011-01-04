@@ -25,3 +25,7 @@ Click the mouse:
 Press a key:
 
     d.keyPress('a')
+
+## Author
+
+    Matthew Downey (http://www.writehack.com)
