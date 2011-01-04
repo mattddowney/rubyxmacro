@@ -1,4 +1,4 @@
-require 'rubyxmacro'
+require 'rubyxmacro/rubyxmacro'
 
 module RubyXMacro
   # Your code goes here...
