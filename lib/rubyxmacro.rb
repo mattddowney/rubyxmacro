@@ -1,5 +1,11 @@
 require 'rubyxmacro/rubyxmacro'
 
 module RubyXMacro
-  # Your code goes here...
+  class Display
+    def sendKeys(keyString)
+      keyString.split('').each do |key|
+        self.keyPress(key)
+      end
+    end
+  end
 end
