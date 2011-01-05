@@ -40,15 +40,15 @@ Send a string of keys:
 
 Other methods:
 
-    d.mouseDown      \#press and hold the mouse button down until mouseUp
-    d.mouseUp        \#release the mouse button
-    d.rightMouseDown \#press and hold the right mouse button down until rightMouseUp
-    d.rightMouseUp   \#release the right mouse button
+    d.mouseDown      #press and hold the mouse button down until mouseUp
+    d.mouseUp        #release the mouse button
+    d.rightMouseDown #press and hold the right mouse button down until rightMouseUp
+    d.rightMouseUp   #release the right mouse button
 
-    d.keycodeDown(keycodeNum) \#press and hold down key with the specified keycode
-    d.keycodeUp(keycodeNum)   \#release the key with the specified keycode
+    d.keycodeDown(keycodeNum) #press and hold down key with the specified keycode
+    d.keycodeUp(keycodeNum)   #release the key with the specified keycode
 
 ## Author
 
 Matthew Downey
-[http://www.writehack.com]
+http://www.writehack.com
