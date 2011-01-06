@@ -7,5 +7,9 @@ Rake::ExtensionTask.new("rubyxmacro") do |extension|
   extension.lib_dir = "lib/rubyxmacro"
 end
 
-task :build => [:clean, :compile]
+task :chmod do
+  File.chmod(0775, 'lib/rubyxmacro/rubyxmacro.so')
+end
+task :build => [:clean, :compile, :chmod]
+
 Bundler::GemHelper.install_tasks
