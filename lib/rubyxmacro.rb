@@ -5,12 +5,24 @@ module RubyXMacro
     # Press and release a string of keys.
     def sendKeys(keyString)
       keyString.split('').each do |key|
-        self.keyPress(key)
+        if RubyXMacro::KEYCODES[key] == nil then
+          self.keyPress(key)
+        else
+          keycode = RubyXMacro::KEYCODES[key]
+          keyCase = keycode[-1]
+          keycode = keycode.chop.to_i
+          if keyCase == 'l' then
+            keycodePress(keycode)
+          else
+            keycodeShiftPress(keycode)
+          end
+        end
       end
     end
   end
 
   KEYCODES = {
+    ' ' => '65l',
     '`' => '49l',
     '~' => '49u',
     '1' => '10l',
