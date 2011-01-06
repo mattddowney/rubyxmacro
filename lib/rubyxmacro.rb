@@ -4,7 +4,7 @@ module RubyXMacro
   class Display
     # Press and release a string of keys.
     def sendKeys(keyString)
-      keyString.split('').each do |key|
+      keyString.each_char do |key|
         if RubyXMacro::KEYCODES[key] == nil then
           self.keyPress(key)
         else
