@@ -4,6 +4,8 @@
 
 Rubyxmacro allows you to automate mouse and keyboard movements on Linux with Ruby. It was created in order to test flash websites, but it could be used for many other purposes.
 
+The project is hosted on github at [http://github.com/mattddowney/rubyxmacro](http://github.com/mattddowney/rubyxmacro)
+
 ## Install
 
 Your system needs to have the Xtst library installed.
@@ -30,13 +32,9 @@ Click the mouse:
     d.click
     d.rightClick
 
-Press a key:
+Type a string of keys:
 
-    d.keyPress('a')
-
-Send a string of keys:
-
-    d.sendKeys('Thisisastring') \#only upper and lowercase QWERTY and numerals ATM
+    d.sendKeys('Hello World!')
 
 Other methods:
 
@@ -45,10 +43,12 @@ Other methods:
     d.rightMouseDown #press and hold the right mouse button down until rightMouseUp
     d.rightMouseUp   #release the right mouse button
 
-    d.keycodeDown(keycodeNum) #press and hold down key with the specified keycode
-    d.keycodeUp(keycodeNum)   #release the key with the specified keycode
+    d.keyPress                      #press a key, only supports letters and numerals
+    d.keycodePress(keycodeNum)      #press a key based on it's keycode
+    d.keycodeShiftPress(keycodeNum) #hold down shift, then press key
+    d.keycodeDown(keycodeNum)       #press and hold down key with the specified keycode
+    d.keycodeUp(keycodeNum)         #release the key with the specified keycode
 
 ## Author
 
-Matthew Downey
-http://www.writehack.com
+Matthew Downey - [http://www.writehack.com](http://www.writehack.com)
