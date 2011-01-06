@@ -184,6 +184,19 @@ static VALUE method_keycodePress(VALUE self, VALUE keycode)
 }
 
 /*
+ * Document-method: keycodeShiftPress
+ *
+ * Hold down shift, then press and release the key with the value keycode.
+ *
+ *   display.keycodeShiftPress(int_keycode)
+ */
+static VALUE method_keycodeShiftPress(VALUE self, VALUE keycode)
+{
+	keycodeShiftPress(NUM2INT(keycode));
+	return Qnil;
+}
+
+/*
  * Document-method: keyDown
  * 
  * Hold down the key until keyUp.
@@ -247,7 +260,8 @@ void Init_rubyxmacro()
 	rb_define_method(displayClass, "keycodeDown", method_keycodeDown, 1);
 	rb_define_method(displayClass, "keycodeUp", method_keycodeUp, 1);
 	rb_define_method(displayClass, "keycodePress", method_keycodePress, 1);
+	rb_define_method(displayClass, "keycodeShiftPress", method_keycodeShiftPress, 1);
 	rb_define_method(displayClass, "keyDown", method_keyDown, 1);
 	rb_define_method(displayClass, "keyUp", method_keyUp, 1);
-	rb_define_method(displayClass, "keyPress", method_keyPress, 1);
+	rb_define_method(displayClass, "keyPress", method_keyPress, 1);;
 }

@@ -25,6 +25,7 @@ Display * display;
 const int DELAY = 10;
 const int LEFT_MOUSE_BUTTON = 1;
 const int RIGHT_MOUSE_BUTTON = 3;
+const int SHIFT_KEYCODE = 50;
 
 /* Open the default display.
  * The default display is contained in the $DISPLAY environment variable. */
@@ -140,6 +141,15 @@ void keycodePress(int keycode)
 	return;
 }
 
+/* Hold down shift, then press and release the key with the value keycode. */
+void keycodeShiftPress(int keycode)
+{
+        keycodeDown(SHIFT_KEYCODE);
+	keycodePress(keycode);
+        keycodeUp(SHIFT_KEYCODE);
+	return;
+}
+
 /* Convert a string to it's keycode. */
 int stringToKeycode(char * key)
 {
@@ -182,12 +192,8 @@ void keyPress(char * key)
 	
 	if (keyS == lowercase)
 		keycodePress(stringToKeycode(key));
-	else
-	{
-		keycodeDown(50);	/* shift */
-		keycodePress(stringToKeycode(key));
-		keycodeUp(50);
-	}
+	else	/* uppercase */
+		keycodeShiftPress(stringToKeycode(key));
 
 	return;
 }
