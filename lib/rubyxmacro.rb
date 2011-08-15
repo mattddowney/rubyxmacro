@@ -5,7 +5,7 @@ module RubyXMacro
     # Press and release a string of keys.
     def sendKeys(keyString)
       while keyString.length > 0 do
-        keyStringArray = keyString.partition(/{(.*?)}/)
+        keyStringArray = keyString.partition(/\{(.*?)\}/)
         keyString = keyStringArray[0]
         
         keyString.each_char do |key|
