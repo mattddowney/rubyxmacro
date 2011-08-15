@@ -1,6 +1,7 @@
 tmp/*
 pkg/*
 *.swp
+*.gem
 
 # Compiled source #
 ###################
@@ -9,7 +10,7 @@ pkg/*
 *.dll
 *.exe
 *.o
-#*.so
+*.so
 
 # Packages #
 ############
