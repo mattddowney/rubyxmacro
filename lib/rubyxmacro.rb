@@ -23,8 +23,11 @@ module RubyXMacro
           end
         end
         
-        specialKey = keyStringArray[1].slice(1..(keyStringArray[1].length - 2)).upcase
-        keycodePress(RubyXMacro::SPECIAL_KEYCODES[specialKey])
+        specialKey = keyStringArray[1].slice(1..(keyStringArray[1].length - 2))
+        if specialKey != nil then
+          specialKey.upcase!
+          keycodePress(RubyXMacro::SPECIAL_KEYCODES[specialKey])
+        end
         
         keyString = keyStringArray[2]
       end
