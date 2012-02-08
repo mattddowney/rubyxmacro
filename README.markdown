@@ -11,6 +11,8 @@ The project is hosted on github at [http://github.com/mattddowney/rubyxmacro](ht
 Your system needs to have the Xtst library installed.
 On Ubuntu, this is as easy as:
     sudo apt-get install libxtst-dev
+On Fedora, try:
+    yum install libXtst-devel
 
 Then, just install with rubygems:
 
