@@ -16,7 +16,7 @@
 
 require 'mkmf'
 if have_library("Xtst") then
-	create_makefile("rubyxmacro")
+	create_makefile("rubyxmacro/rubyxmacro")
 else
 	puts "Cannot find Xtst library."
 	puts "Try apt-get install libxtst-dev"
