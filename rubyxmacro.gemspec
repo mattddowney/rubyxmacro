@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   #s.rubyforge_project = "rubyxmacro"
 
-  s.files         = `git ls-files`.split("\n") << "lib/rubyxmacro/rubyxmacro.so"
+  #s.files         = `git ls-files`.split("\n") << "lib/rubyxmacro/rubyxmacro.so"
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib", "ext/rubyxmacro"]
