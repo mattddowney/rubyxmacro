@@ -53,4 +53,4 @@ Other methods:
 
 ## Author
 
-Matthew Downey - [http://www.writehack.com](http://www.writehack.com)
+Matthew Downey
